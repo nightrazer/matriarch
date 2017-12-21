@@ -1,0 +1,199 @@
+<style>
+   #everything{
+      width: 100%;
+      height: 100%;
+
+      background-color: black;
+   }
+
+   #sun{
+     height: 200px;
+     width: 200px;
+    
+      margin-top: -100px;
+      margin-left: -100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+
+      border-left: 2px solid orange;
+      border-right: 2px solid orange;
+      background-color: yellow;
+      
+    -webkit-animation: spin-right 10s linear infinate;
+    -moz-animation: spin-right 10s linear infinate;
+     animation: spin-right 10s linear infinate;
+   }
+
+   #earth{
+
+      height: 50px;
+      width: 50px;
+
+      position: absolute;
+      top: 0; left: 50%;
+      margin-left: -25px; margin-top: -25px;
+      border-radius: 50%;
+
+      border-left: 2px solid white;
+      box-shadow: 0 0 64px blue;
+      background-color: blue;      
+      
+   }
+
+#earth2 {
+    /* Style your earth */
+    position: absolute;
+/*    top: 25%; */ top: 0;
+/*    left: 25%; */ left: 50%;
+
+    height: 10px;
+    width: 10px;
+    margin-left: -25px;
+    margin-top: -25px;
+	padding: 10px;
+    border-left: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 64px green;
+    background-color: red;
+    
+    
+}
+
+#earth-orbit {
+    /* For Section #2 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+    height: 340px;
+    margin-top: -190px;
+    margin-left: -250px;
+
+    border-width: 0px;
+    border-style: dotted;
+    border-color: white;
+    border-radius: 10%;
+    
+      -webkit-animation: spin-right 10s linear infinite;
+     -moz-animation: spin-right 10s linear infinite;
+      -ms-animation: spin-right 10s linear infinite;
+       -o-animation: spin-right 10s linear infinite;
+          animation: spin-right 10s linear infinite;
+}
+
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(160deg);
+       -moz-transform: rotate(160deg);
+        -ms-transform: rotate(160deg);
+         -o-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+}
+
+@keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#moon {
+    /* Style your earth */
+    position: absolute;
+/*    top: 25%; */ top: 0;
+/*    left: 25%; */ left: 50%;
+
+    height: 50px;
+    width: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+
+    border-left: 0px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 64px black;
+    background-color: white;
+    
+}
+
+
+#moon2 {
+    /* Style your earth */
+    position: absolute;
+/*    top: 25%; */ top: 0;
+/*    left: 25%; */ left: 50%;
+
+    height: 10px;
+    width: 10px;
+    margin-left: 25px;
+    margin-top: 25px;
+
+    border-left: 0px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 64px black;
+    background-color: green;
+    
+}
+
+
+#moon-orbit {
+    /* For Section #2 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100px;
+    height: 140px;
+    margin-top: -190px;
+    margin-left: -250px;
+
+    border-width: 0px;
+    border-style: dotted;
+    border-color: white;
+	background-color: ;
+    
+      -webkit-animation: spin-right 10s linear infinite;
+     -moz-animation: spin-right 10s linear infinite;
+      -ms-animation: spin-right 10s linear infinite;
+       -o-animation: spin-right 10s linear infinite;
+          animation: spin-right 10s linear infinite;
+}
+#extra{background-color: white;}
+
+
+
+
+</style>
+
+<div id="everything">
+
+<div id="sun">
+   <div id="earth-orbit">
+       <div id="moon-orbit">
+
+           <div id="moon">
+             <p id="extra"></p>
+           </div>
+           
+           <div id="moon2">
+           </div>
+
+       </div>
+       <div id="earth">
+          <div id="earth-orbit">
+             <div id="earth2">
+             </div>      
+          </div>
+       </div>
+       
+   </div>
+
+</div>
+
+</div>
