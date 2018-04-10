@@ -6,3 +6,6 @@ It's purpose is store strings, nullify the content and to write as bugfree code 
 
 All the projects done here are only for educational use and shows how I develop as a C# developer.
 If you have any questions or advice I would like that very much. I am at the beginning of my education.
+
+You will find Diagrams of how the Programs are made as well as comments on the different sections
+They are developed mostly as instructed with a few creative twists.
