@@ -20,7 +20,12 @@ namespace Backpacker
             // Tanken har varit att koden på detta vis ska bli mer återanvändningsbar
             // Detta har gjort genom att lägga dessa att skapa private static void metoder.
             //
-            // Dessa metoder kallas sedan i lämplig ordning innifrån Main metoden
+            // Choices blev så stor då Variablerna myItem1 - MyItem4 hamnar annars utanför scope
+            // vilket gör att det inte kan användas. De har kastats ur minnet in i garbage collectorn.
+            // Därför måste de användas inom samma kodblock.
+            
+            // Dessa metoder kallas i lämplig ordning innifrån Main metoden
+
             Welcome();
             Menu();
             Choices();
@@ -151,6 +156,8 @@ namespace Backpacker
                     Console.Write("Välj 1 - 4: ");
                     int Trash = Convert.ToInt32(Console.ReadLine());
                     // Testar Exception handlers
+                    /*
+                     * Jag fick det inte att fungera denna gång.
                     try
                     {
                         int CheckTrash = Convert.ToInt32(Trash);
@@ -159,6 +166,7 @@ namespace Backpacker
                     {
                         Console.WriteLine("Du kan enbart välja siffror");
                     }
+                    */
 
                     if (Trash == 1)
                     {
