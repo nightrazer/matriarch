@@ -4,13 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * Jag har valt att inte använda Switch statements då jag tyckte det var svårare att kunna 
+ * få till användningen av att plocka information från variabeln utanför switch metoden.
+ * Jag har arbetat på det, men jag hinner inte få det att fungera i takt med min deadline.
+ * Denna version av Backpacker tror jag stämmer mest överenns med hur uppgiften ska se ut.
+ *
+ * Om jag hinner med kommer denna variant fungera med Try och Catch, såsom tidigare utgåvor
+ * av Backpacker. Mina andra varianter kan ses på min Github: https://github.com/nightrazer/matriarch
+ * 
+*/
+
 namespace BackPacker4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Section 1
+            // Variablen
             string item1 = "";
 
             bool menuSystem = true;
