@@ -9,8 +9,8 @@ namespace Backpacker5
     class Program
     {
         static void Main(string[] args)
-
         {
+            string userInput = "";
 
             bool myloop = true;
             while (myloop) { 
@@ -30,26 +30,30 @@ namespace Backpacker5
                     Console.WriteLine("Fel! Du får bara skriva in nummer!");
                 }
 
-
-                string userInput = "";
                 switch (menyVal)
                 {
                     case "1":
-                        Console.Write("Skriv något: ");
+                        Console.Write("\tSkriv något: ");
                         userInput = Console.ReadLine();
-                        // Console.Write(userInput);
-                        // break;
-                        continue;
-                    case "2":
-                         
-                         Console.WriteLine(userInput);
-                   
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
-                            
+
+                    case "2":
+                        Console.WriteLine("Din utmatning var: " + userInput);
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+
                     case "3":
                         // Nollställning
-                        // userinput = "";
-                        Console.Write("Inside string is: ____" + userInput + "____ If blank it is removed");
+                         userInput = "";
+                         Console.Write("Innuti strängen finns: ____");
+                         Console.Write(userInput);
+                         Console.Write("____ . Om det är tomt, Nollställd.");
+                         Console.WriteLine(userInput);
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "4":
