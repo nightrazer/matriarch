@@ -21,16 +21,13 @@ namespace Uppgift_4
                           // ändrade (!spela) till (spela)
             {
                 Console.Write("\n\tGissa på ett tal mellan 1 och 20: ");
-                int tal = Convert.ToInt32(Console.ReadLine());
-                
-                try
+               // int tal = Convert.ToInt32(Console.ReadLine());
+             if (Int32.TryParse(Console.ReadLine(), out int tal)){
+                   // Console.WriteLine("Det här fungerar!");
+                }   
+             else
                 {
-                    
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Något gick snett!");
-                    //throw;
+                    Console.WriteLine("Du kan enbart skriva in siffror!");
                 }
 
 
@@ -56,16 +53,18 @@ namespace Uppgift_4
                     // prövar (tal == speltal)
                     // ändrat till en else if
                     Console.WriteLine("\tGrattis, du gissade rätt!");
-                    Console.WriteLine("\tDet tog dig {0} gissningar", Gissningar);
+                    Console.WriteLine("\tDet tog dig {0} antal gissningar", Gissningar);
                     
                     Gissningar++;
 
                 spela = false;
-
                 Console.ReadLine();
+                    Environment.Exit(0);
                 }
                 else{
-                    Console.WriteLine("Something wrong");
+                    Console.WriteLine("Något gick fel");
+                    Console.ReadLine();
+                    Environment.Exit(0);
                 }
             }
         }
