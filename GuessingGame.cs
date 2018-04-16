@@ -22,12 +22,17 @@ namespace Uppgift_4
             {
                 Console.Write("\n\tGissa på ett tal mellan 1 och 20: ");
                // int tal = Convert.ToInt32(Console.ReadLine());
+               // Denna kod med TryParse förhindrar felaktig utmatning
+               // Koden ger ett fel som jag upptäckt. Vid inmatning av flyt-tal så registreras
+               // det som 0. Jag hade planer på att skapa en avrundning till närmaste heltal
+               // och fånga det upp på något sätt.
              if (Int32.TryParse(Console.ReadLine(), out int tal)){
                    // Console.WriteLine("Det här fungerar!");
                 }   
-             else
+             else 
                 {
-                    Console.WriteLine("Du kan enbart skriva in siffror!");
+                    Console.WriteLine("Du kan enbart skriva in heltals siffror!");
+                    // Visas vid felaktig utmatning
                 }
 
 
@@ -35,15 +40,15 @@ namespace Uppgift_4
                 {
                    
                     Console.WriteLine("\tDet inmatade talet " + tal + " är för litet, försök igen.");
-                    string resultat = Console.ReadLine();
-                    Gissningar++;
+                    string resultat = Console.ReadLine(); // användarens gissade värde sparas här
+                    Gissningar++; // Ökar Antalet gissningar med +1
                 }
 
                 else if (tal > speltal) // ändrat till en else if
                 {
                     Console.WriteLine("\tDet inmatade talet " + tal + " är för stort, försök igen.");
-                    string resultat = Console.ReadLine();
-                    Gissningar++;
+                    string resultat = Console.ReadLine(); // användarens gissade värde sparas här
+                    Gissningar++; // Ökar Antalet gissningar med +1
                     // Console.WriteLine("\tDet inmatade talet " + tal  " är för stort, försök igen.");
                     // Strängen saknade ett plus för att addera ihop sista strängen
                 }
@@ -55,14 +60,17 @@ namespace Uppgift_4
                     Console.WriteLine("\tGrattis, du gissade rätt!");
                     Console.WriteLine("\tDet tog dig {0} antal gissningar", Gissningar);
                     
-                    Gissningar++;
+                    Gissningar++; // Ökar Antalet gissningar med +1
 
-                spela = false;
+                    spela = false; // loppen spela avslutas och programmet avslutas.
+                    // Tyvärr loopas inte programmet för flera spelningar emot en hi-score lista.
                 Console.ReadLine();
-                    Environment.Exit(0);
+                    Environment.Exit(0); // Avslutar programmet
                 }
                 else{
-                    Console.WriteLine("Något gick fel");
+                    Console.WriteLine("Något gick fel. Felkod FF#66251");
+                    // Om någontins oväntat händer så skrivs detta ut, paus för knapptryckning + return.
+                    // Programmet avslutas sedan.
                     Console.ReadLine();
                     Environment.Exit(0);
                 }
