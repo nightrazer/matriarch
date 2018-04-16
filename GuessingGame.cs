@@ -11,7 +11,7 @@ namespace Uppgift_4
             int speltal = slumpat.Next(1 , 20); // anropar Next metoden för att skapa ett slumptal mellan 1 och 20
             // Lade till int speltal = slumpat.Next(1 , 20); istället för int speltal = slumpat.Next();
             int Gissningar = 0;
-            bool Fel = true;
+           // bool Fel = true;
 
 
             // läs på, vad är overload metoder? https://msdn.microsoft.com/en-us/library/system.random.next(v=vs.110).aspx
@@ -22,6 +22,17 @@ namespace Uppgift_4
             {
                 Console.Write("\n\tGissa på ett tal mellan 1 och 20: ");
                 int tal = Convert.ToInt32(Console.ReadLine());
+                
+                try
+                {
+                    
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Något gick snett!");
+                    //throw;
+                }
+
 
                 if (tal < speltal)
                 {
