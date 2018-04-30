@@ -46,7 +46,9 @@ namespace PersonalData_ListAccess
         }
 
 
-       
+       // Går igenom hela listan och letar efter plats ID
+       // det hämtas in till key.
+       // Omskrivet utifrån Exempel 14.2
         class Program
         {
             static int LinearSearch(List<Logg> list, int key)
@@ -62,6 +64,7 @@ namespace PersonalData_ListAccess
             }
             static void Main(string[] args)
             {
+                // Dummy listan av ett flertal testinlägg
                 List<Logg> myList = new List<Logg>();
                 myList.Add(new Logg(1, "Dagens rubrik", "Det här är vad som har hänt idag", 20180430));
                 myList.Add(new Logg(2, "Förra veckans nytt", "Det här är vad som har hänt förra veckan", 20180430));
@@ -74,7 +77,9 @@ namespace PersonalData_ListAccess
                 myList.Add(new Logg(9, "Minrubrik9", "Nya recept", 20180704));
                 myList.Add(new Logg(10, "Minrubrik10", "Nytt datorinköp", 20190812));
 
+                Console.WriteLine("Programmet är skrivet utan felhanterare!, mata in enbart siffror. 1 - 10");
                 Console.Write("Välj bland lnlägg 1 - 10: ");
+                
                 string mySearch = Console.ReadLine();
                 int key = Convert.ToInt32(mySearch);
                 int index = LinearSearch(myList, key);
