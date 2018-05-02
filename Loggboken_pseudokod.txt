@@ -1,0 +1,35 @@
+Pseudokod
+
+Skapar vektorn myList
+Menyn MenyisOn = true
+Omvandlar strängen till heltal
+OM menyval 1:
+	FÖR VARJE föremål i myList
+		FÖR starta på 0, maxvärdet är 4, öka +1
+			Skriv ut föremålet på listan
+	Skriv ut  ”Tryck på Return för at återgå till menyn” 
+	Väntar på Enter
+
+OM menyval 2: 
+	Skriv ut Hej då
+	Vänta 1 sekund
+	avsluta loopen MenyisOn
+
+OM menyval 3: 
+	intitierar strängen avskiljare, 
+	initilerar strängen datum
+	Skriv ut ”Titel: ”
+	Skriv ut ”Medelande: ”
+	Skapar vektor logg { avskiljare, titlel, datum, meddelande }
+	Lägger till logg in i vektorn myList
+
+Om menyval 4:
+	Skriv ut ”Skriv in ett sökord: ”
+	Skapar strängen sökord och läser in det från inmatningen
+	FÖR VARJE föremål i vektorn myList
+		FÖR starta på 0, maxvärdet 4; öka +1
+		OM sök igenom MyList efter ett föremål som matchar sökordet.
+		Skriv ut ”hittade” föremålet ”i rubrik eller medelande”
+	
+	
+	
